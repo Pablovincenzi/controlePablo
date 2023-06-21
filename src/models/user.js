@@ -1,12 +1,29 @@
-const { Schema } = require('mongodb');
+// const { Schema } = require('mongodb');
 
-const UserSchema = new Schema({
+// const UserSchema = new Schema({
+//   nome: { type: String, required: true },
+//   email: { type: String, required: true, unique: true },
+//   telefone: { type: String },
+//   senha: { type: String, required: true },
+// });
+
+// const User = mongoose.model('User', UserSchema);
+
+// module.exports = User;
+const mongoose = require('mongoose');
+mongoose.Promise = global.Promise;
+
+const modelSchema = new mongoose.Schema({
   nome: { type: String, required: true },
   email: { type: String, required: true, unique: true },
-  telefone: { type: String },
-  senha: { type: String, required: true },
+   telefone: { type: String },
+   senha: { type: String, required: true }
 });
 
-const User = mongoose.model('User', UserSchema);
+const modelName = 'User';
 
-module.exports = User;
+if(mongoose.connection && mongoose.connection.models[modelName]) {
+    module.exports = mongoose.connection.models[modelName];
+} else {
+    module.exports = mongoose.model(modelName, modelSchema);
+}
