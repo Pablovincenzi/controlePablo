@@ -16,17 +16,17 @@ module.exports = {
       registerUser : async (req, res) => {
         
             
-         const data = req.body.name ;
-         const data1 = req.params.name ;
-        //  const newUser = new User({
-        //      name: data.name,
-        //      email : data.email,
-        //      telefone: data.telefone,
-        //      senha: data.senha
+        // const name = req.body.name ;
+        // const telefone = req.body.telefone ;
+          const newUser = new User({
+            name: req.body.name,
+             email : req.body.email,
+            telefone: req.body.telefone,
+            senha: req.body.senha
 
-        //  });
-        console.log(data,data1)
-         //await newUser.save();
+         });
+       // console.log(telefone,name)
+         await newUser.save();
          res.json({Ok:'cadastro realizado'});
         
 
