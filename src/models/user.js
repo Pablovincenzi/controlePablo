@@ -14,10 +14,10 @@ const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 
 const modelSchema = new mongoose.Schema({
-  nome: { type: String, required: true },
+  name: { type: String, required: true },
   email: { type: String, required: true, unique: true },
-   telefone: { type: String },
-   senha: { type: String, required: true }
+  telefone: { type: String },
+  senha: { type: String, required: true }
 });
 
 const modelName = 'User';

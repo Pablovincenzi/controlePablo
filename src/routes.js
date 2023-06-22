@@ -14,13 +14,14 @@ const UserController = require('./controllers/userController')
 router.get('/ping', (req, res)=>{
   res.json({pong: true});
  }); 
- router.get('/user', UserController.getTeste)
+router.get('/user', UserController.getAll)
+router.post('/usersignup', UserController.registerUser)
 
 // router.get('/states', UserController.getStates);
 // router.post('/state/register',UserValidator.stateregister, UserController.registerState); 
 
 // router.post('/user/signin', AuthValidator.signin, AuthController.signin);
-// router.post('/user/signup', AuthValidator.signup, AuthController.signup);
+//router.post('/user/signup', AuthValidator.signup, AuthController.signup);
 
 // router.get('/user/me', Auth.private, UserController.info);
 // router.put('/user/me', UserValidator.editAction, Auth.private, UserController.editAction);

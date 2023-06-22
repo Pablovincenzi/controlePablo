@@ -8,10 +8,30 @@ const User = require('../models/User');
 // const Ad = require('../models/Ad');
 
 module.exports = {
-    getTeste: async (req, res) => {
+    getAll: async (req, res) => {
         let users = await User.find();
         res.json({users});
     },
+   // cadastro Usuário
+      registerUser : async (req, res) => {
+        
+            
+         const data = req.body.name ;
+         const data1 = req.params.name ;
+        //  const newUser = new User({
+        //      name: data.name,
+        //      email : data.email,
+        //      telefone: data.telefone,
+        //      senha: data.senha
+
+        //  });
+        console.log(data,data1)
+         //await newUser.save();
+         res.json({Ok:'cadastro realizado'});
+        
+
+        
+     },
     // info: async (req, res) => {
     //     let token = req.query.token;
 
@@ -77,17 +97,5 @@ module.exports = {
 
     //     res.json({});
     // },
-    //   //cadastro estado
-    //   registerState : async (req, res) => {
-            
-    //     const data = matchedData(req);
-    //     const newState = new State({
-    //         name: data.name,
-    //         uf : data.uf
-    //     });
-    //     await newState.save();
-    //     res.json({Ok:'cadastro realizado'});
-
-        
-    // }
+    
 };
