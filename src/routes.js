@@ -15,8 +15,9 @@ router.get('/ping', (req, res)=>{
   res.json({pong: true});
  }); 
 router.get('/user', UserController.getAll)
+router.get('/userbuscar/:cod', UserController.findByCod)
 router.post('/usersignup', UserController.registerUser)
-
+router.delete('/userdelete', UserController.deleteByCod)
 // router.get('/states', UserController.getStates);
 // router.post('/state/register',UserValidator.stateregister, UserController.registerState); 
 

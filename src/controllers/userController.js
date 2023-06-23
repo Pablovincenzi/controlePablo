@@ -8,6 +8,21 @@ const User = require('../models/User');
 // const Ad = require('../models/Ad');
 
 module.exports = {
+  findByCod: async  (req, res) => {
+    let codUser = req.params.cod
+
+    let users = await User.findOne({cod:codUser})
+    res.json({codUser,users});
+},
+  
+  deleteByCod: async (req, res) => {
+    let codUser = req.body.cod
+    console.log(codUser)
+
+
+    let users = await User.deleteOne({cod:codUser})
+    res.json({teste:'deletado com sucesso'});
+},
     getAll: async (req, res) => {
         let users = await User.find();
         res.json({users});
@@ -19,6 +34,7 @@ module.exports = {
         // const name = req.body.name ;
         // const telefone = req.body.telefone ;
           const newUser = new User({
+            cod:req.body.cod,
             name: req.body.name,
              email : req.body.email,
             telefone: req.body.telefone,
