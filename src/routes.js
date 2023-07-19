@@ -1,7 +1,8 @@
 const express = require('express');
 const router = express.Router();
 
-const UserController = require('./controllers/userController')
+const UserController = require('./controllers/userController');
+const EssenciaController = require('./controllers/EssenciaController');
 // const Auth = require('./middlewares/Auth');
 
 // const AuthValidator = require('./validators/AuthValidator');
@@ -18,6 +19,8 @@ router.get('/user', UserController.getAll)
 router.get('/userbuscar/:cod', UserController.findByCod)
 router.post('/usersignup', UserController.registerUser)
 router.delete('/userdelete', UserController.deleteByCod)
+
+router.post('/cadessencia', EssenciaController.cadEssencia)
 // router.get('/states', UserController.getStates);
 // router.post('/state/register',UserValidator.stateregister, UserController.registerState); 
 
