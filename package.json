@@ -25,6 +25,7 @@
     "fileupload": "^1.0.0",
     "mongodb": "^5.6.0",
     "mongoose": "^7.2.4",
-    "routes": "^2.1.0"
+    "routes": "^2.1.0",
+    "validator": "^13.9.0"
   }
 }

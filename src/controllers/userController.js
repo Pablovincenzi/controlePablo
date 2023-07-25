@@ -36,7 +36,7 @@ module.exports = {
           const newUser = new User({
             cod:req.body.cod,
             name: req.body.name,
-             email : req.body.email,
+            email : req.body.email,
             telefone: req.body.telefone,
             senha: req.body.senha
 
