@@ -47,6 +47,17 @@ module.exports = {
 
         
      },
+
+     uploadImgEssencia : async (req, res) => {
+        
+          
+    
+       res.json({Ok:'cadastro realizado'});
+    
+
+    
+ },
     
     
 };
+
