@@ -6,7 +6,9 @@ const modelSchema = new mongoose.Schema({
   name: { type: String, required: true },
   sabor: { type: String, required: true},
   marca: { type: String,required: true  },
-  valor: { type: Number, required: true }
+  valor: { type: Number, required: true },
+  images: {type: Object, required: true},
+  dateCreated: {type: Date, required: true},
 });
 
 const modelName = 'Essencia';
