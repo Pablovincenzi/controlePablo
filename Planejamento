@@ -6,7 +6,25 @@ Cadastro de usuário com login
 
 Cadastro de contas
 
--Id
+- Id
+- Nome_conta
+- Valor_inicial
+- Saldo_atual
+
+Cadastro_tipo_Despesa
+
+- Id
+- cod
+- Descrição da despesa
+
+Nova Despesa
+
+- Id
+- Cod
+- Id_tipo_despesa
+- Valor
+- Descrição
+- Data 
 
 Cadastro de essencia
 
